@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<title>Request For New PAN Card Or/And Changes Or Correction in PAN Data</title>
+<meta charset="UTF-8">
+<body BGCOLOR=#FFFFDD leftmargin="0" topmargin="0">
+    <table border=0 width = 100% cellpadding =0 cellspacing = 0 bgcolor="#FFCC00">
+        <tr>
+            <td colspan="4" align= CENTER background="https://tin.tin.nsdl.com/pan/images/RedBar.gif">
+                <B><FONT COLOR="#FFFFFF">Request For New PAN Card Or/And Changes Or Correction in PAN Data</FONT></B><BR>
+                    <I><FONT COLOR="#FFFFFF">Fields marked with </FONT><FONT COLOR=RED>*</FONT><FONT COLOR="#FFFFFF"> (asterisk) are mandatory. </FONT></I>.
+                    <I>
+                      <FONT COLOR="#FFFFFF">To avoid mistake(s), please refer </FONT><A HREF="/pan/GuidelinesCorr.html" TARGET="new"><FONT COLOR="#FF9900">guidelines</FONT></A><FONT COLOR=#FFFFF> and </FONT><A HREF="/pan/InstructionsCorr.html" TARGET="new"><FONT COLOR="#FF9900">instructions</FONT></A>
+                   </I>.
+            </td>
+        </tr>
+    </table>
+    <form>
+        <table cellpadding = 0 border= 1 cellspacing = 0 width =100%>
+            <tr bgcolor = '#e0e0e0'>
+                <td><b></b></td>
+            </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2" width = 98%><b><font color = red>*</font> Whether citizen of India</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Yes<input type="radio" id="Yes" name ="citizen"value="yes">
+                &nbsp;&nbsp;&nbsp;
+                No <input type="radio" id ="No" name="citizen" value="no">
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2" width = 98%><b><font color = red>*</font> Permanent Account Number (PAN)</b>
+                <input type="text" name="pan_num" value=" " maxlength="10">
+        </tr>
+        <tr>
+            <td>
+            <input type="checkbox" name = "name" value="yes">
+            </td>
+            <td colspan="2">
+                <b><font color = red>*</font>1.Name</b>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2" width = 98%><b>Title</b>
+            &nbsp;&nbsp;&nbsp;
+            Shri/Mr<input type="radio" name = "title" id ="shri" value = "shri">
+            &nbsp;&nbsp;&nbsp;
+            Smt./Mrs. <input type="radio" name = "title" id ="smt" value = "smt">
+            &nbsp;&nbsp;&nbsp;
+            Kumari/Ms <input type="radio" name = "title" id ="kumari" value = "kumari">
+            &nbsp;&nbsp;&nbsp;
+            Ms <input type="radio" name = "title" id ="Ms" value = "Ms">
+            </td>    
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2" width = 98%>
+            <table cellpadding = 0  cellspacing = 0 width =100%>
+                <tr>
+                <td><b>Last Name/Surname</b><br> <input type="text" name="lastname" maxlength="15"></td>
+                <td><b>First Name</b><br> <input type="text" name="FirstName" maxlength="15"></td>
+                <td><b>Middle Name</b><br> <input type="text" name="MiddleName" maxlength="15"></td>
+                </tr>
+                
+            </table>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2" width = 98%><b><font color = red>*</font><b>Name as you would like it printed on the card</b>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2">
+            <input type="text" name ="nameoncard" maxlength="40">
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2"><b>Details of Parents.</b></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><b>Whether mother is single parent and you wish to apply for PAN by furnishing the name of your mother only</b></td>
+            <td colspan="2" width = 75%>
+            Yes<input type="radio" id="Yes" name ="apppar"value="yes">
+            No<input type="radio" id="Yes" name ="apppar"value="no">
+        </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name = "name" value="yes"></td>
+            <td colspan="2" width = 98%><b><font color = red>*</font>Father's Name</b>(Mandatory field. Even married women should give father's name only.)
+                </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2" width = 98%>
+            <table cellpadding = 0  cellspacing = 0 width =100%>
+                <tr>
+                <td><b>Last Name/Surname</b><br> <input type="text" name="lastname" maxlength="15"></td>
+                <td><b>First Name</b><br> <input type="text" name="FirstName" maxlength="15"></td>
+                <td><b>Middle Name</b><br> <input type="text" name="MiddleName" maxlength="15"></td>
+                </tr>
+                
+            </table>
+            </td>
+        </tr>
+            <tr>
+                <td><input type="checkbox" name = "name" value="yes"></td>
+            <td colspan="2" width = 98%><b>Mother's Name</b>(This field is optional.)
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td colspan="2" width = 98%>
+                <table cellpadding = 0  cellspacing = 0 width =100%>
+                    <tr>
+                    <td><b>Last Name/Surname</b><br> <input type="text" name="lastname" maxlength="15"></td>
+                    <td><b>First Name</b><br> <input type="text" name="FirstName" maxlength="15"></td>
+                    <td><b>Middle Name</b><br> <input type="text" name="MiddleName" maxlength="15"></td>
+                    </tr>
+                    
+                </table>
+                </td>
+            </tr>
+
+
+
+        </table>
+    </form>
+
+</body>
+</html>
