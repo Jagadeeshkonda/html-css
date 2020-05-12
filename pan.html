@@ -125,7 +125,797 @@
                 </table>
                 </td>
             </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <b><font color = red>*</font>4. Select Parent name which is to be printed on the card</b></br>(In case no option is provided then PAN card will be issued with father's name)
+                </td>
+                <td >
+                    Father Name <input type = "radio"  checked id ="fr" name="fathername_fld" value ="F">
+                    &nbsp;&nbsp;&nbsp;
+                    Mother Name <input type = "radio"  id ="mr" name="fathername_fld" value ="M">
 
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <input type ="checkbox">
+                </td>
+                <td>
+                    <b><font color ="red">*</font>5. Date of Birth/Incorporation/Agreement/Partnership<BR>
+                        or Trust Deed/Formation of Body of Individuals/<BR>
+                        Association of Persons</b>
+                </td>
+                <td>
+                    <table cellpadding=0 cellspacing=0 border=0>
+                     <tr>
+                      <td valign=top><font size=-1>DD</font><br>
+                           <select name="dd">
+                             <option value="" > DD</option>
+                             <option value="01" > 1</option>
+                             <option value="02" > 2</option>
+                             <option value="03" > 3</option>
+                             <option value="04" > 4</option>
+                             <option value="05" > 5</option>
+                             <option value="06" > 6</option>
+                             <option value="07" > 7</option>
+                             <option value="08" > 8</option>
+                             <option value="09" > 9</option>
+                             <option value="10" > 10</option>
+                             <option value="11" > 11</option>
+                             <option value="12" > 12</option>
+                             <option value="13" > 13</option>
+                             <option value="14" > 14</option>
+                             <option value="15" > 15</option>
+                             <option value="16" > 16</option>
+                             <option value="17" > 17</option>
+                             <option value="18" > 18</option>
+                             <option value="19" > 19</option>
+                             <option value="20" > 20</option>
+                             <option value="21" > 21</option>
+                             <option value="22" > 22</option>
+                             <option value="23" > 23</option>
+                             <option value="24" > 24</option>
+                             <option value="25" > 25</option>
+                             <option value="26" > 26</option>
+                             <option value="27" > 27</option>
+                             <option value="28" > 28</option>
+                             <option value="29" > 29</option>
+                             <option value="30" > 30</option>
+                             <option value="31" > 31</option>
+                           </select>
+                      </td>
+                      <td valign=top><font size=-1>MM</font><br>
+                        <select name="mm">
+                          <option value="" > MM</option>
+                          <option value="01" > JAN</option>
+                          <option value="02" > FEB</option>
+                          <option value="03" > MAR</option>
+                          <option value="04" > APR</option>
+                          <option value="05" > MAY</option>
+                          <option value="06" > JUN</option>
+                          <option value="07" > JUL</option>
+                          <option value="08" > AUG</option>
+                          <option value="09" > SEP</option>
+                          <option value="10" > OCT</option>
+                          <option value="11" > NOV</option>
+                          <option value="12" > DEC</option>
+                        </select>
+                   </td>
+                   <td valign=top><font size=-1>YYYY</font><br>
+                    <input type=text name="yyyy" value="" size=4 maxlength=4>
+                </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <input type=checkbox name=pan_sx value="y" >
+                </td>
+                <td>
+                   <b><font color=red>*</font> 6. gender</b>
+                </td>
+                <td>
+                    male <input type=radio name=pan_sx value="m" >
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    female <input type=radio name=pan_sx value="f" >
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    transgender <input type=radio name=pan_sx value="t" >
+                <td>
+             </tr>
+             <tr>
+                <td>
+                   <input type=checkbox name=pan_photo_mis_chk value="y" >
+                </td>
+                <td colspan=2>
+                    <b>&nbsp;&nbsp; 7. photo mismatch</b>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <input type=checkbox name=pan_sig_mis_chk value="y" >
+                </td>
+                <td colspan=2>
+                    <b>&nbsp;&nbsp; 8. signature mismatch</b>
+                </td>
+             </tr>
+             
+             <tr>
+                <td>
+                   <input type=checkbox name=pan_cmnc_addr_chk value="y" checked onclick="return false;">
+                </td>
+                <td>
+                   <b><font color=red>*</font> 9. address for communication</b>
+                </td>
+                <td>
+                  residential
+                  <input type=radio name=pan_cmnc_addr_flg value="r"  onclick = "disablefield(this.value);patchamount();patchdocuments();" >
+    
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  office
+                 <input type=radio name=pan_cmnc_addr_flg value="o"  onclick = "disablefield(this.value);patchamount();patchdocuments();"> 
+             
+                </td>
+             </tr>
+            
+             <tr>
+                <td>&nbsp;</td>
+                <td><span id='office' style=""><b>office name</b><i> (to be filled only in case of office address)</i></span></td>
+                <td><input type=text name=office_nm value=""  size=30 maxlength=64></td>
+             </tr>
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>flat/door/block no.</b></td>
+                <td><input type=text name=line1 value="" size=25 maxlength=25></td>
+             </tr>
+             
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>name of premises/building/village</b></td>
+                <td><input type=text name=line2 value="" size=25 maxlength=25></td>
+             </tr>
+             
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>road/street/lane/post office</b></td>
+                <td><input type=text name=line3 value="" size=25 maxlength=25></td>
+             </tr>
+             
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>area/locality/taluka/sub-division</b></td>
+                <td><input type=text name=line4 value="" size=25 maxlength=25></td>
+             </tr>
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>town/city/district</b></td>
+                <td><input type=text name=line5 value="" size=25 maxlength=25></td>
+             </tr>
+             
+             <tr>
+                <td>&nbsp;</td>
+                <td><b>state/union territory</b></td>
+                <td>
+                 <select name=pan_ro1_state onchange="patchpincode('ro1');patchamount();patchdocuments();">
+                   <option value="" >-- please select --</option>
+                   <option value="1" > andaman & nicobar islands</option>
+                   <option value="2" > andhra pradesh</option>
+                   <option value="3" > arunachal pradesh</option>
+                   <option value="4" > assam</option>
+                   <option value="5" > bihar</option>
+                   <option value="6" > chandigarh</option>
+                   <option value="33" > chhattisgarh</option>
+                   <option value="7" > dadara & nagar haveli</option>
+                   <option value="8" > daman & diu</option>
+                   <option value="9" > delhi</option>
+                   <option value="10" > goa</option>
+                   <option value="11" > gujarat</option>
+                   <option value="12" > haryana</option>
+                   <option value="13" > himachal pradesh</option>
+                   <option value="14" > jammu & kashmir</option>
+                   <option value="35" > jharkhand</option>
+                   <option value="15" > karnataka</option>
+                   <option value="16" > kerala</option>
+                   <option value="17" > lakhswadeep</option>
+                   <option value="18" > madhya pradesh</option>
+                   <option value="19" > maharashtra</option>
+                   <option value="20" > manipur</option>
+                   <option value="21" > meghalaya</option>
+                   <option value="22" > mizoram</option>
+                   <option value="23" > nagaland</option>
+                   <option value="24" > orissa</option>
+                   <option value="25" > pondicherry</option>
+                   <option value="26" > punjab</option>
+                   <option value="27" > rajasthan</option>
+                   <option value="28" > sikkim</option>
+                   <option value="29" > tamil nadu</option>
+                   <option value="36" > telangana</option>
+                   <option value="30" > tripura</option>
+                   <option value="31" > uttar pradesh</option>
+                   <option value="34" > uttaranchal</option>
+                   <option value="32" > west bengal</option>
+                   <option value="99" > outside india </option>
+                 </select>
+                </td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td><b>pin</b> <i>(indicating pin is mandatory)</i></td>
+               <td><input type=text name=pan_ro1_pin value="" size=6 maxlength=6></td>
+             </tr>
+             
+             <tr>
+               <td>&nbsp;</td>
+               <td><b>country</b></td>
+               <td>
+                 <select name="pan_ro1_country" id="selectpan_r_country">
+             </select>
+               </td>
+             </tr>
+             
+             <tr>
+               <td>&nbsp;</td>
+               <td><b>zip</b></td>
+               <td><input type=text name=pan_ro1_zip value="" size=7 maxlength=7 ></td>
+             </tr>
+             
+             
+             
+             <tr>
+               <td>
+                  <input type=checkbox id="otheraddrchk" name=pan_update_chk value="y"  onclick="showotheraddr()">
+               </td>
+               <td colspan=2>
+                  <b> 10. if you desire to update your other address, give required details & </b> <b> <u> submit proof of other
+                  address also</u>.
+               </td>
+             </tr>
+             
+             <tr>
+             <td colspan="3" id="tdoffaddr">
+             <table width=100% cellpadding=0 cellspacing=0>
+
+             </table>
+             </td>
+             </tr>
+            
+             <tr class="hidetr">
+               <td>&nbsp;</td>
+               <td>
+                 <span id='pan_off1_style' style=""><b>office name</b><i> (to be filled only in case of office address)</i></span>
+               </td>
+               <td><input type=text name=pan_off_nm1 value=""  size=64 maxlength=64></td>
+             </tr>
+             
+             <tr class="hidetr">
+               <td>&nbsp;</td>
+               <td>
+                 <b>flat/door/block no.</b>
+               </td>
+               <td><input type=text name=pan_ro2_addr1 value="" size=25 maxlength=25></td>
+             </tr>
+             
+             <tr class="hidetr">
+               <td>&nbsp;</td>
+               <td>
+                 <b>name of premises/building/village</b>
+               </td>
+               <td><input type=text name=pan_ro2_addr2 value="" size=25 maxlength=25></td>
+             </tr>
+             
+             <tr class="hidetr">
+               <td>&nbsp;</td>
+               <td>
+                 <b>road/street/lane/post office</b>
+               </td>
+               <td><input type=text name=pan_ro2_addr3 value="" size=25 maxlength=25></td>
+             </tr>
+             
+             <tr class="hidetr">
+                <td>&nbsp;</td>
+                <td>
+                    <b>area/locality/taluka/sub-division</b>
+                </td>
+                    <td><input type=text name=pan_ro2_addr4 value="" size=25 maxlength=25></td>
+             </tr>
+             <tr class="hidetr">
+                <td>&nbsp;</td>
+                <td>
+                    <b>town/city/district</b>
+                    </font>
+                </td>
+                     <td><input type=text name=pan_ro2_addr5 value="" size=25 maxlength=25></td>
+             </tr>
+             
+             <tr class="hidetr">
+               <td>&nbsp;</td>
+               <td>
+                 <b>state/union territory</b>
+               </td>
+               <td>
+                 <select name=pan_ro2_state onchange="patchpincode('ro2');patchamount();patchdocuments();">
+                   <option value="" >-- please select --</option>
+                   <option value="1" > andaman & nicobar islands</option>
+                   <option value="2" > andhra pradesh</option>
+                   <option value="3" > arunachal pradesh</option>
+                   <option value="4" > assam</option>
+                   <option value="5" > bihar</option>
+                   <option value="6" > chandigarh</option>
+                   <option value="33" > chhattisgarh</option>
+                   <option value="7" > dadara & nagar haveli</option>
+                   <option value="8" > daman & diu</option>
+                   <option value="9" > delhi</option>
+                   <option value="10" > goa</option>
+                   <option value="11" > gujarat</option>
+                   <option value="12" > haryana</option>
+                   <option value="13" > himachal pradesh</option>
+                   <option value="14" > jammu & kashmir</option>
+                   <option value="35" > jharkhand</option>
+                   <option value="15" > karnataka</option>
+                   <option value="16" > kerala</option>
+                   <option value="17" > lakhswadeep</option>
+                   <option value="18" > madhya pradesh</option>
+                   <option value="19" > maharashtra</option>
+                   <option value="20" > manipur</option>
+                   <option value="21" > meghalaya</option>
+                   <option value="22" > mizoram</option>
+                   <option value="23" > nagaland</option>
+                   <option value="24" > orissa</option>
+                   <option value="25" > pondicherry</option>
+                   <option value="26" > punjab</option>
+                   <option value="27" > rajasthan</option>
+                   <option value="28" > sikkim</option>
+                   <option value="29" > tamil nadu</option>
+                   <option value="36" > telangana</option>
+                   <option value="30" > tripura</option>
+                   <option value="31" > uttar pradesh</option>
+                   <option value="34" > uttaranchal</option>
+                   <option value="32" > west bengal</option>
+                   <option value="99" > outside india</option>
+                 </select>
+                </td>
+             </tr>
+             
+             <tr class="hidetr">
+               <td>&nbsp;</td>
+               <td>
+                 <b>pin</b> <i>(indicating pin is mandatory)</i>
+               </td>
+               <td><input type=text name=pan_ro2_pin value="" size=6 maxlength=6></td>
+             </tr>
+             <tr class="hidetr">
+               <td>&nbsp;</td>
+               <td><b>country</b></td>
+               <td>
+             
+             <select name="pan_ro2_country" id="selectpan_o_country">
+            
+             </select>
+             </td>
+             </tr>
+             <tr class="hidetr">
+             <td>&nbsp;</td>
+             <td><b>zip</b></td>
+             <td><input type=text name=pan_ro2_zip value="" size=7 maxlength=7 ></td>
+             </tr>
+              
+             <tr>
+               <td>
+                  <input type=checkbox name=pan_tel_chk value="y" >
+               </td>
+               <td>
+                  <b><font color=red>*</font> 11. telephone no.</b><br>
+                     (country code is compulsory)</td>
+               <td>
+               <table border=1>
+                 <tr>
+                     <td width=100% align=left colspan=3>
+                     <font size=-1>country code (isd code)</font><br>
+                     <select name=pan_tel_cc id=selectcountrycodefortelnum>
+                     </select>
+                  </td>
+             
+                <!-- below lines are added bcoz requirement changed for telephone number point, they want radio button for this -->
+             
+             </tr>
+             <tr>
+             
+             <td colspan=1>
+             <input type = "radio" name = "pan_tel_num_grp" id="panmobnum" value="m"   onchange="disabletelnum();"> mobile no.
+             </td>
+             
+             <td colspan=1>
+             <input type = "radio" name = "pan_tel_num_grp" id="pantelnum" value="t"   onchange="disabletelnum();"> telephone no.
+             </td>
+             
+             
+             
+             </tr>
+             <tr>
+             
+             <!-- changes completed for telephone number given on 9-feb-2012 -->
+                  <td width=100% align=left>
+                   <font size=-1>area/std code</font><br>
+                   <input type=text name=pan_tel_std value="" id="pantelnum1" size=10 maxlength=7>
+                  </td>
+                  <td width=100% align=left>
+                   <font size=-1>telephone no./mobile no.</font><br>
+                   <input type=text name=pan_tel_num value="" id="pantelnum2" size=13 maxlength=13>
+                   </td>
+               </tr>
+               </table>
+               </td>
+             </tr>
+             
+             
+             <tr>
+               <td>&nbsp;</td>
+               <td><b> e-mail id</b></td>
+               <td><input type=text name=pan_email value="" size=40 maxlength=40></td>
+             </tr>
+             
+             
+             
+             
+             
+             
+             <tr>
+             <td>&nbsp;</td>
+             <td> in case of a citizen of india, then </td>
+             <td>
+                 <input type="radio" name="pan_uid_flg" id="pan_uid_flg_a" value="a"  onclick="disableeid(true);" >aadhaar &nbsp;
+                 <input type="radio" name="pan_uid_flg" id="pan_uid_flg_e" value="e"  disabled=true onclick="disableaadhaar(true);" >eid
+             </td>
+             </tr>
+             <tr style="display:" id="rowaadhar">
+                <td><input type=checkbox id = "aadharchk" name="pan_aadhar_chk" value="y" ></td>
+                <td><b><font color=red>*</font> 12. aadhaar number : </b></td> 
+                <td colspan="2">
+                   <input type=text id = pan_aadhar_num name=pan_aadhar_num value="" size="12" maxlength="12" onkeyup="disableaadharpaymode();" onblur="disableaadharpaymode()">
+                   <input type="hidden" id="straadhaarname" name="straadhaarname" value="" /> <br/>
+                   <i><b><font color="#00008b">in case aadhaar number is provided, <br/>then proof of aadhaar along with supporting documents is to be submitted to nsdl</font></b></i>
+                </td> 
+             </tr>
+             
+             <tr style="display: none" id="roweid">
+                <td><input type=checkbox id = "eidchk" name="pan_eid_chk" value="y" ></td>
+                <td><b><font color=red>*</font> 12. enrollment id (eid) : </b></td>
+                 <td> 
+                    <input type=text name=pan_eid_num id="pan_eid_num" value="" maxlength="28" size="30">
+                  </td>
+             </tr>
+             
+             <tr id="rowname">
+             <td> </td>
+               <td><font color=red>*</font> name as per aadhaar letter <br/>or <br/>as per the enrollment id of aadhaar application form</td>
+               <td colspan=2><input type=text name="pan_adh_mn_nm" id="pan_adh_mn_nm" value="" size=100 maxlength=100></td>
+             </tr>
+             
+             <tr>
+                       <td> </td>
+                       
+                         <td colspan="2">
+                             <div id="aadharnote" style="display: none; " >
+             <ol>
+                 <li><em>in case aadhaar number is provided, then proof of aadhaar along with supporting documents is to be submitted to nsdl e-gov.</em></li>
+                 <li><em>in case applicant is <strong>&lsquo;minor&rsquo;</strong>, aadhaar of minor should be mentioned in the application form.</em></li>
+                 <li><em>aadhaar no. would be authenticated using applicant&rsquo;s full name, date of birth and gender as mentioned in this application form.</em></li>
+             </ol>
+             </div>
+                         </td>
+             </tr>
+             
+             
+             
+             <tr>
+               <td>&nbsp;</td>
+               <td><b>13. gstn</b></td>
+               <td><input type=text name=pan_gstn_num value="" size=15 maxlength=15></td>
+             </tr>
+             
+             
+             
+             
+             
+             
+                                 
+             
+             <tr>
+               <td><input type=checkbox name="pan_num_chk" value="y" ></td>
+               <td colspan=2><b> 14. mention other permanent account numbers (pans) if any,inadvertently allotted to you. <u>submit
+               proof of surrendered pan(s) along with the application</u>.</b> </td>
+             </tr>
+             
+             <tr>
+               <td>&nbsp;</td>
+               <td><b>pan1</b> <input type=text name=pan_num1 value="" size=20 maxlength=10> 
+             </td>
+               <td><b>pan2</b> <input type=text name=pan_num2 value="" size=20 maxlength=10> 
+             </td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td><b>pan3</b> <input type=text name=pan_num3 value="" size=20 maxlength=10> 
+             </td>
+               <td><b>pan4</b> <input type=text name=pan_num4 value="" size=20 maxlength=10> 
+             </td>
+             </tr>
+             
+             
+             
+             
+             
+             <tr>
+                <td>&nbsp;</td>
+                <td colspan=2><b> 15. verification </b></td>
+             </tr>
+             
+             <tr>
+                 <td>&nbsp;</td>
+                 <td colspan=2 valign=top>i/we 
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type=text name=pan_verify_name value=""  size=75 maxlength=75 /> 
+                 ,the applicant,in the capacity of
+                 &nbsp;&nbsp;&nbsp;
+                 <select name=pan_verify_capacity>
+                          <option value="" >-- please select --
+                          <option value="01" > himself/herself
+                          <option value="07" > representative assessee
+                     </select>
+                 do hereby declare that what is stated above is true to the best of my information and belief. <br>
+                 i have enclosed <input type=text name=pan_nocopy value="" size=2 maxlength=2>
+                 (number of documents) in support of proposed changes/corrections.
+               </td>
+             </tr>
+             
+             
+             
+             <tr>
+               <td>&nbsp;</td>
+               <td colspan=3>place
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type=text name=pan_place value="" size=30 maxlength=30>
+               </td>
+              </tr>
+             
+             
+             
+             <tr>
+               <td>&nbsp;</td>
+               <td valign=top colspan=2>
+                 <table cellpadding=0 cellspacing=0 border=0>
+                 <tr>
+                   <td valign=bottom>verified today, the</td>
+                   <td width=5><br></td>
+                   <td valign=bottom><font size=-1>dd</font><br>
+                     11 -
+                   </td>
+                   <td valign=bottom><font size=-1>mm</font><br>
+                     05 -
+                   </td>
+                   <td valign=bottom><font size=-1>yyyy</font><br>
+                     2020
+                   </td>
+                 </tr>
+                 </table>
+                 <input type=hidden name=pan_veri_dd value="11">
+                 <input type=hidden name=pan_veri_mm value="05">
+                 <input type=hidden name=pan_veri_yyyy value="2020">
+               </td>
+             </tr>
+             
+             
+             
+             
+             
+             
+             <tr>
+               <td>&nbsp;</td>
+               <td colspan=2 valign=top>i/we have enclosed
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <select name=pan_prf_idnty id="selectaccordingtocountrypoi" style = "white-space: nowrap" ">
+                    </select>
+                    as proof of identity, 
+                    <select name=pan_prf_addr id="selectaccordingtocountrypoa"  style = "white-space: nowrap" ">
+                    </select>
+                    as proof of address, 
+                 <select id="selectaccordingtocountrypob"  name="pan_prf_dob">
+                 <option value="">--please select--</option>
+                 </select>
+                     <span id ='dob_text'>as proof of date of birth and</span>    
+             
+                    <select name=pan_prf_pan>
+                        <option value="">--please select--
+                        <option value="1"  > copy of pan card
+                        <option value="2"  > copy of pan allotment letter
+                        <option value="3"  > no document
+                    </select>  
+                    as proof of pan allotted.
+             
+                    
+                </td>
+             </tr>
+             
+             <tr>
+                                                     <td > </td>
+                                                     <td style="border:none;width:60%" colspan="2"><b>
+                                                         whether you wish to have?</b>
+                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                         <input type=radio name=pan_opt id="pan_opt" value="y"  onclick="closefee();" checked  > physical pan card & e-pan card
+                                                         &nbsp;&nbsp;&nbsp;&nbsp;
+                                                     
+                                                         <input type=radio name=pan_opt id="pan_opt" value="n" onclick="closefee();" > only e-pan card
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="cursor: pointer; font-style: italic; font-weight: bold; " onclick="openfeeapplication();"><u>fees applicable</u></span>	
+                                                     <span id='epanid' style="display:none;">(only e-pan card will be dispatched at email address mentioned in your application, as physical pan card is not requested.)</span>
+                                                     </td> 
+                                                     
+                                                     
+                                                     
+                                                 </tr>
+                                                 <tr id="feeapplicable" style="border:none;width:100%;display:none;">
+                                                 <td style="border:none" colspan="3">
+                                                 <div style="margin-left:50%">
+                                                 <table class="fee_table">
+                                                 <tr class="fee"><td class="fee" colspan="3"><b>physical pan card & e-pan card</b></td></tr>
+                                                 <tr class="fee"><td class="fee"><b>pan card dispatch</b></td ><td class="fee"><b>mode of pan application</b></td><td class="fee"><b>processing fee including gst</b></td></tr>
+                                                 <tr class="fee"><td class="fee">indian address</td><td class="fee">dsc based</td><td class="fee"><img height = 11 src = "/pan/images/rp.png" width = 10> 101.00</td></tr>
+                                                 <tr class="fee"><td class="fee">foreign address</td><td class="fee">dsc based</td><td class="fee"><img height = 11 src = "/pan/images/rp.png" width = 10> 1011.00</td></tr>
+                                                 </table>
+                                                 </div>
+                                                 </td>
+                                                 </tr>
+                                                 <tr id="feeapplicable_epan" style="border:none;width:100%;display:none;">
+                                                 <td style="border:none" colspan="3">
+                                                 <div style="margin-left:50%">
+                                                 <table class="fee_table">
+                                                     <tr class="fee"><td class="fee" colspan="2"><b>only e-pan card</b></td></tr>
+                                                     <tr class="fee"><td class="fee"><b>mode of pan application</b></td><td class="fee"><b>processing fee including gst</b></td></tr>
+                                                     <tr class="fee"><td class="fee">dsc based</td><td class="fee"><img height = 11 src = "/pan/images/rp.png" width = 10> 66.00</td></tr>
+                                                     </table>
+                                                 </div>
+                                                 </td>
+                                                 </tr>
+             
+             
+                                 <tr>
+               <td>&nbsp;</td>
+               <td colspan=2><b>other details</b></td>
+             </tr>
+               
+               
+             <tr>
+               <td>&nbsp;</td>
+               <td colspan=2><b>1. depository account details</b>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td colspan=2>
+                 <b>dp id: </b>&nbsp;&nbsp;<input type=text name=pan_dp_id value="" size=10 maxlength=8>&nbsp;&nbsp;
+                 <b>client id: </b>&nbsp;&nbsp;<input type=text name=pan_client_id value="" size=10 maxlength=8>&nbsp;&nbsp;
+               </td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td colspan=2><b>2. payment details</b></td>
+             <tr>
+               <td>
+                 <input type=radio name=pan_pay_mode value="b">
+               </td>
+               <td colspan=2>
+                 <b>online payment <span style="display:none">(<img height = 11 src = "/pan/images/rp.png" width = 10> <b id = "amount5"></b> &nbsp;&nbsp;&nbsp; <a href="/pan/bank.html" target="_new">list of banks available</a>
+               </td>
+             </tr>
+             
+             <table width="100%">
+             <tr>
+             <font style="color:red;">
+             </font>
+             </tr>
+             <tr>
+                     for paperless pan application: <input type="radio" id="show" name="app_name" value="y" checked="checked"  checked >yes <input type="radio" id="hide"
+                         name="app_name" value="n" disabled >no
+                         
+                     <td id="id1">
+             
+                         <input type="radio" name="sign_type" value="dsc" id="dsc" align="center" checked="checked" onclick="disableelements()" /> dsc
+                                     <select name="user_type" id="dscdrop" style="width: 200px; height: 22px">
+                          <option value="select"  >--select--</option>
+                          <option value="minor" >minor</option>
+                          <option value="ra"  >lunatic/idiot</option>
+                          <option value="ap"  >self</option>
+                         </select>
+                         &nbsp;&nbsp;&nbsp;      <a href="/pan/instructiondsc.html" target="_new">guidelines for dsc user</a>
+                         <input type="hidden" name="dsc" id="dsc1">
+                     </td>
+                         
+             </tr>
+             <tr id="id3">                
+                     <td align="left" >
+                              upload photo
+                             </td>
+                             <td>
+                             <input id="pic_file_name" type="file" name="pic_file_name" size="15" onchange="filetypeimage(this, ['test','jpg','jpeg']);"/>
+                             </td>
+                             <td>
+                             <div id="pic_file_name_msg" > </div>
+                             </td>
+             
+                             <td align="left">
+                              upload signature
+                             </td>
+                             <td>
+                             <input id="sign_file_name" type="file" name="sign_file_name" size="15"  onchange="filetypeimage(this, ['test', 'jpg', 'jpeg']);"/>
+                             </td>
+                     
+                             <td>
+                             <div id="sign_file_name_msg" > </div>
+                             </td>
+             </tr>
+             <tr id="id4" >
+                             <td align="left">
+                               upload document
+                             </td>
+                             <td>
+                             <input id="doc_file_name" type="file"  size="15"  name="doc_file_name" onchange="filetypedoc(this, ['test','jpg', 'jpeg', 'pdf']);"/>
+                             </td>
+                     <td><input type="hidden" name="filename" id="filename"> </td>
+                     <td><input type="hidden" name="counter" id="counter" value='0'></td>
+                             <td>
+                              <div id="doc_file_name_msg" ></div><p id="demo"></p> 
+                             </td>
+                     <td align="center">or&nbsp;&nbsp;</td>
+             </tr>
+             <tr id="id5">
+                     <td align="left"><div class="share_fm_dl" id=""></div></td>
+             
+             </tr>
+             
+             </table>
+             <tr>
+               <td valigm=top align=center colspan=3>
+             <input type="hidden" name="pan_applcnt_status" value="p">
+                 <input type=hidden name="pan_start_time" value="2020051120:20:45">
+                 <input id="hiddenamount" type=hidden name="pan_amt_newapp" value="101">
+                     <input id="form" type=hidden name="registration" value="indian">
+                     <input type='hidden' name="apptype" value="dsc" id="apptype">
+                 <table border=0 cellpadding=0 cellspacing=0 width=100%> 
+             
+                  <input type="hidden" name="sharing_status" id="sharing_status" value=""></input>
+                 <input type="hidden" name="session_id" id="session_id" value=""></input>	
+                 <input type="hidden" name="doc_file_name_data" id="doc_file_name_data" value=""></input>	
+                 <input type="hidden" name="pic_file_name_data" id="pic_file_name_data" value=""></input>
+                 <input type="hidden" name="sign_file_name_data" id="sign_file_name_data" value=""></input>
+                 <input type="hidden" name="pic_file_name_flg" id="pic_file_name_flg" value="" ></input>
+                 <input type="hidden" name="sign_file_name_flg" id="sign_file_name_flg" value=""></input>
+                 <input type="hidden" name="doc_file_name_flg" id="doc_file_name_flg" value=""></input>
+                 <input type="hidden" name="doc_file_name_1" id="doc_file_name_1" value="" readonly='readonly'></input>
+                 <input type="hidden" name="pic_file_name_1" id="pic_file_name_1" value="" readonly='readonly'></input>
+                 <input type="hidden" name="sign_file_name_1" id="sign_file_name_1" value="" readonly='readonly'></input>
+                 <input type="hidden" name="digi_base64_data" id="digi_base" value=""></input>
+                 <input type="hidden" name="digi_base64_flg" id="digi_base_flg" value=""></input>
+                 <tr id="id6"><td>
+                 <br>already uploaded photo:</td><td><input type="text" size="30" id="pic_file_name_state" name="pic_file_name_state" value="" readonly="readonly">
+                 </td></tr>
+                 <tr id="id7"><td>
+                 <br>already uploaded signature:</td><td><input type="text" id="sign_file_name_state" name="sign_file_name_state" value="" readonly="readonly">
+                 </td></tr>
+                 <tr id="id8"><td>
+                 <br>already uploaded documents:</td><td><textarea rows="7" cols="40" id="doc_file_name_state" name="doc_file_name_state" readonly='readonly'></textarea>
+                 </td></tr>
+                 <input type="hidden" name="txtsignature" id="txtsignature" value=""></input>
+                 <input type="hidden" id="doc_id" name="doc_id"></input> 
+                 <input type="hidden" id="user_type" name="user_type" value=""></input>
+                 <input type="hidden" id="data" name="data" value=""></input>
+                 <input type="hidden" id="cert_sr_no" name="cert_sr_no" value=""></input>
+                 <input type="hidden" name="page" value="registration">
+             
+                 <tr id="id9">
+                 <td align=center colspan=2>
+             <input type=button name=submit value="submit" id="submitbutton" size=10 maxlength=10 >
+             <input type=submit name="submit" style="display:none;" value="submitt" id="submittid" > </input>
+
+        
 
 
         </table>
