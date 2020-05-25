@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        .input-container {
+          display: -ms-flexbox; /* IE10 */
+          display: flex;
+          width: 100%;
+          margin-bottom: 15px;
+          text-align: left;
+        }
+        
+        .icon {
+          padding: 10px;
+          background: dodgerblue;
+          color: white;
+          min-width: 50px;
+          text-align: center;
+        }
+        
+        .input-field {
+          width: 100%;
+          padding: 10px;
+          outline: none;
+        }
+        
+        .input-field:focus {
+          border: 2px solid dodgerblue;
+        }
+        
+        /* Set a style for the submit button */
+        .btn {
+          background-color: dodgerblue;
+          color: white;
+          padding: 15px 20px;
+          border: none;
+          cursor: pointer;
+          width: 10%;
+          opacity: 0.9;
+          margin-left: 20%;
+        }
+        
+        .btn:hover {
+          opacity: 1;
+        }
+        </style>
+    <body>
+        <div style="margin-left: 4%;margin-top: -13%; background-color: beige;" >
+            <form style="margin-left: 35%;margin-top: 15%;" >
+                <div class="input-container">
+                <p><b>Full Name</b> &nbsp;&nbsp;</p> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+                <i class="fa fa-user icon"></i>
+                <input  type="text" placeholder="Full Name" name ="fullname">
+            </div>
+            <div class="input-container">
+                <p ><b>Address Line 1</b> &nbsp;&nbsp; </p>&emsp;&emsp;&emsp;&emsp;
+                <i class="fa fa-home icon"></i>
+                <input  type="text" placeholder="Address Line 1" name ="add1">
+            </div>
+            <div class="input-container">
+                <p ><b>Address Line 2</b> &nbsp;&nbsp; </p>&emsp;&emsp;&emsp;&emsp;
+                <i class="fa fa-home icon"></i>
+                <input  type="text" placeholder="Address Line 2" name ="add2">
+            </div>
+            <div class="input-container">
+                <p ><b>City</b> &nbsp;&nbsp; </p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+                <i class="fa fa-home icon"></i>
+                <input  type="text" placeholder="City" name ="city">
+            </div>
+            <div class="input-container">
+                <p ><b>State/Province/Region</b> &nbsp;&nbsp; </p>&nbsp;&nbsp;
+                <i class="fa fa-home icon"></i>
+                <input  type="text" placeholder="State/Province/Region" name ="state">
+            </div>
+            <div class="input-container">
+                <p ><b>Postal Code/ZIP</b> &nbsp;&nbsp; </p>&emsp;&emsp;&nbsp;&nbsp;&emsp;
+                <i class="fa fa-home icon"></i>
+                <input  type="text" placeholder="Postal Code/ZIP" name ="code">
+            </div>
+            <div class="input-container">
+                <p ><b>Country </b>&nbsp;&nbsp; </p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;
+                <i class="fa fa-list icon"></i>
+                <select id="country" name="coun">
+                    <option value="A really long option to push menu">A really long option to push menu</option>
+                    <option value="INDIA">INDIA</option>
+                    <option value="GERMANY">GERMANY</option>
+                  </select>
+            </div>
+            <div class="input-container">
+                <p ><b>Email</b> &nbsp;&nbsp; </p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;
+                <i class="fa fa-envelope icon"></i>
+                <input  type="text" placeholder="Email" name ="mail">
+            </div>
+            <div class="input-container">
+                <p ><b>Phone Number</b> &nbsp;&nbsp; </p>&emsp;&emsp;&emsp;&emsp;
+                <i class="fa fa-phone icon"></i>
+                <input  type="text" placeholder="Phone Number" name ="Phone Number">
+            </div>
+            <br><br>
+            <button  type="submit" class="btn" onclick="dis();">Submit</button>
+            </form>
+        </div>
+    </body>
+    <script>
+        function dis(){
+           alert("Thank you!");
+        }
+    </script>
+</html>
